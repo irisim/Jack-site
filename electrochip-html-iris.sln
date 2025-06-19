@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "electrochip-html-iris", ".", "{9F39858B-3B94-4E34-968D-4DD95D0AEEEF}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_62548"
+		Debug.AspNetCompiler.PhysicalPath = "..\electrochip-html-iris\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62548\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_62548"
+		Release.AspNetCompiler.PhysicalPath = "..\electrochip-html-iris\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62548\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "62548"
+		SlnRelativePath = "..\electrochip-html-iris\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F39858B-3B94-4E34-968D-4DD95D0AEEEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F39858B-3B94-4E34-968D-4DD95D0AEEEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9CB854DF-1E11-4503-B925-712E28A8E942}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Jack</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+
+    <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg custom_nav-container ">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.png" alt="">
+                        <span>
+                            Jack
+                        </span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="s-1"> </span>
+                        <span class="s-2"> </span>
+                        <span class="s-3"> </span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                            <ul class="navbar-nav  ">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html"> About</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="service.html"> Projects </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="blog.html"> READING </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- end header section -->
+    </div>
+    <!-- service section -->
+    <section class="service_section layout_padding">
+        <div class="container">
+            <div class="heading_container">
+                <h2>
+                    Projects
+                </h2>
+                <img src="images/plug.png" alt="">
+            </div>
+
+            <div class="service_container">
+                <div class="col-md-4">
+                    <a href="https://github.com/Yaron-Jack" target="_blank">
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="images/GitHub-logo.png" alt="" style="width: 90%; height: auto;">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    GitHub Account
+                                </h5>
+                                <p>
+                                    Check out my depositories and code
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-md-4">
+                    <a href="https://github.com/Yaron-Jack/Deep-Q-Network-Learning-to-Play-Cart-Pole" target="_blank">
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="images/deep.png" class="img1" alt="" style="width: 90%; height: auto;">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    Deep Q-Network
+                                </h5>
+                                <p>
+                                    Learning to play Cart-Pole
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+
+            </div>
+            <div class="btn-box">
+                <a href="service.html">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- end service section -->
+
+    <script>
+        function handleBoxClick(event, videoId, githubLink) {
+            const video = document.getElementById(videoId);
+
+            if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement) {
+                const secondChoice = confirm("The video is already in full screen. Do you want to exit full screen mode?");
+                if (secondChoice) {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.mozCancelFullScreen) { // Firefox
+                        document.mozCancelFullScreen();
+                    } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+                        document.webkitExitFullscreen();
+                    } else if (document.msExitFullscreen) { // IE/Edge
+                        document.msExitFullscreen();
+                    }
+                }
+            } else {
+                const userChoice = confirm("Do you want to see the video in full screen? Click 'Cancel' to go to the GitHub link.");
+                if (userChoice) {
+                    if (video.requestFullscreen) {
+                        video.requestFullscreen();
+                    } else if (video.mozRequestFullScreen) { // Firefox
+                        video.mozRequestFullScreen();
+                    } else if (video.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                        video.webkitRequestFullscreen();
+                    } else if (video.msRequestFullscreen) { // IE/Edge
+                        video.msRequestFullscreen();
+                    }
+                } else {
+                    window.open(githubLink, "_blank");
+                }
+            }
+        }
+    </script>
+
+    <!-- info section -->
+
+    <section class="info_section layout_padding">
+        <div class="container">
+            <div class="info_contact">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="">
+                            <img src="images/location-white.png" alt="">
+                            <span>
+                                Tel Aviv, Israel
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <div>
+                            <a href="https://www.linkedin.com/in/iris-eting-786a89222/" target="_blank">
+
+                                <img src="images/linkedin.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div>
+                            <a href="https://www.instagram.com/iriseting?igsh=YnZjaWdxd2phcHAw" target="_blank">
+                                <img src="images/instagram.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="">
+                            <img src="images/envelope-white.png" alt="">
+                            <span>
+                                Contact Me
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- end info section -->
+
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+
+</body>
+
+</html>

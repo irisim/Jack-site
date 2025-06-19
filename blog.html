@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Jack</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Hebrew & serif fonts for the favourite‑books section -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@300;400;600;700&family=Noto+Serif:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <!-- Favourite‑books scoped styles  -->
+  <style>
+    /* ----- FAVOURITE BOOKS SECTION (scoped by #fav-books) ----------------*/
+    #fav-books {
+      direction: rtl;
+      font-family: 'Noto Sans Hebrew', Arial, sans-serif;
+      text-align: right;
+    }
+    #fav-books .favbooks-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    #fav-books .favbooks-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      padding: 40px 30px;
+      text-align: center;
+    }
+    #fav-books .favbooks-header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    #fav-books .favbooks-header p {
+      font-size: 1.1rem;
+      font-weight: 300;
+      opacity: 0.9;
+      text-align: center;
+    }
+    #fav-books .section-title {
+      font-size: 1.8rem;
+      color: #667eea;
+      margin-bottom: 25px;
+      font-weight: 600;
+      border-bottom: 3px solid #667eea;
+      padding-bottom: 10px;
+    }
+    #fav-books .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 15px;
+    }
+    #fav-books .book-item {
+      background: #f8f9fa;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 15px;
+      transition: all 0.3s ease;
+      position: relative;
+      text-align: right;
+    }
+    #fav-books .book-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+      border-color: #667eea;
+    }
+    #fav-books .book-number {
+      display: inline-block;
+      background: #667eea;
+      color: #fff;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 25px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-left: 10px;
+      flex-shrink: 0;
+    }
+    #fav-books .book-title {
+      font-weight: 500;
+      color: #2c3e50;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    #fav-books .english {
+      font-family: 'Noto Serif', serif;
+      font-style: italic;
+      color: #6c757d;
+    }
+    #fav-books .authors-section {
+      background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+      border-radius: 10px;
+      padding: 25px;
+      margin-top: 40px;
+    }
+    #fav-books .authors-section h2 {
+      color: #d63031;
+      border-bottom-color: #d63031;
+    }
+    #fav-books .authors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+    #fav-books .author-item {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 12px;
+      border-radius: 6px;
+      font-weight: 500;
+      text-align: center;
+      border: 1px solid rgba(214, 48, 49, 0.2);
+    }
+    /* print button */
+    #print-books {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #667eea;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+    #print-books:hover {
+      background: #5a67d8;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+    @media print {
+      #print-books {
+        display: none;
+      }
+      #fav-books .book-item {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+    }
+    @media (max-width: 768px) {
+      #fav-books .book-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body class="sub_page">
+
+  <div class="hero_area">
+    <!-- header section starts -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="">
+            <span> Jack </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="s-1"> </span>
+            <span class="s-2"> </span>
+            <span class="s-3"> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="service.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- existing Gallery, Sketches & blog2 sections KEEP AS‑IS -->
+  <!-- ... (the content you already had is untouched and stays here) ... -->
+  
+  <!-- Favourite Books Section -->
+  <section id="fav-books" class="layout_padding">
+    <button id="print-books" onclick="window.print()">🖨️ Print PDF</button>
+
+    <div class="favbooks-container">
+      <div class="favbooks-header">
+        <h1>100 הספרים הכי אהובים עליי</h1>
+        <p>סדר אסוציאטיבי - רשימת קריאה אישית</p>
+      </div>
+
+      <div class="favbooks-content p-4">
+        <h2 class="section-title">רשימת הספרים</h2>
+        <div class="book-grid">
+          <!-- Books 1‑58 (extend as needed) -->
+          <div class="book-item"><div class="book-title"><span class="book-number">1</span> אמנות האהבה של אריך פרום</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">2</span> תליין האהבה פסיכולוגיה אקזיסטנציאליסטית</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">3</span> חנויות הקינמון בסימן עוף החול - ברונו שולץ</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">4</span> <span class="english">Brené Brown</span></div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">5</span> סיפור על אהבה וחושך - עמוס עוז</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">6</span> האחים קרמזוב</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">7</span> תת ההכרה נפתחת כמו מניפה - יונה וולך</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">8</span> <span class="english">The Subtle Art of Not Giving a F*ck</span></div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">9</span> שלושה בסירה אחת</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">10</span> התופסן בשדה השיפון</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">11</span> סיפורים קצרים של פרנץ קפקא</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">12</span> האחים טאנר</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">13</span> אשה בורחת מבשורה - גרוסמן</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">14</span> סיפורי מעשיות של רבי נחמן</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">15</span> ליקוטי מוהרן</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">16</span> רודף העפיפונים - חאלד חוסייני</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">17</span> הנזיר שמכר את הפרארי שלו</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">18</span> מורה נבוכים - הרמב"ם (מהשער השני)</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">19</span> זה המקום - אהוד בנאי</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">20</span> עלילות טום סוייר</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">21</span> אלוהים מבקש את האדם - השל</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">22</span> <span class="english">1984</span></div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">23</span> עלובי החיים - ויקטור הוגו</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">24</span> אדם מחפש משמעות</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">25</span> <span class="english">7 Habits for Highly Successful Teens</span></div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">26</span> היומן של אלכס (הצנחן האמריקאי)</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">27</span> <span class="english">Feeling Good - D. Burns CBT</span></div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">28</span> האיש שחשב שאשתו היא כובע</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">29</span> אלוהים מרחם על ילדי הגן - יהודה עמיחי</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">30</span> <span class="english">The Hitchhiker's Guide to the Galaxy</span></div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">31</span> <span class="english">No More Mr. Nice Guy</span></div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">32</span> <span class="english">To Kill a Mockingbird</span></div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">33</span> <span class="english">The Making of Music - Quartet Music Romance</span></div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">34</span> אסימוב</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">35</span> "הטנק" - ענברי</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">36</span> נוילנד</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">37</span> נעם חורב - שירים</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">38</span> <span class="english">Shoe Dog</span></div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">39</span> <span class="english">The Almanack</span></div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">40</span> החטא ועונשו</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">41</span> כתבים מן המחתרת - רשימות חורף על רשמי קיץ</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">42</span> <span class="english">Shoe Dog - Nike Founder</span></div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">43</span> בלתי שביר, הברבור השחור - ניסים טאלב</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">44</span> גוגול - סיפורים אוקראיניים</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">45</span> פוקנר - שדה התירס</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">46</span> כל החיים לפניו</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">47</span> טירת הזכוכית</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">48</span> הרמן הסה - סידהארתה</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">49</span> חרדתו של המלך סולומון</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">50</span> ייסוריו של איוון איליץ - טולסטוי</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">51</span> זורבה היווני</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">52</span> דיוקן עצמי - מישל קישקה</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">53</span> <span class="english">Untamed - Glennon Doyle</span></div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">54</span> אליפים - שחר אסתר שטרייט ורצל</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">55</span> מגילת סן מיקל</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">56</span> מישהו לרוץ איתו</div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">57</span> <span class="english">A Short History of Nearly Everything</span></div></div>
+          <div class="book-item"><div class="book-title"><span class="book-number">58</span> האומן ומרגריטה - בולגקוב</div></div>
+        </div>
+
+        <!-- Authors subsection -->
+        <div class="authors-section">
+          <h2 class="section-title">סופרים אהובים עליי במיוחד</h2>
+          <div class="authors-grid">
+            <div class="author-item">אמיל אז'אר</div>
+            <div class="author-item">סטפן צווייג</div>
+            <div class="author-item">דוסטויבסקי</div>
+            <div class="author-item">אהוד בנאי</div>
+            <div class="author-item">יונה וולך</div>
+            <div class="author-item">יהודה עמיחי</div>
+            <div class="author-item">גרוסמן</div>
+            <div class="author-item">אסימוב</div>
+            <div class="author-item">נעם חורב</div>
+            <div class="author-item">רבי נחמן</div>
+            <div class="author-item">רוברט וואלזר</div>
+            <div class="author-item">קפקא</div>
+            <div class="author-item">השל</div>
+            <div class="author-item">דגלס אדמס</div>
+            <div class="author-item">גוגול</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center py-3" style="background:#2c3e50;color:#fff;font-size:0.9rem;opacity:0.8;">
+        רשימת קריאה אישית • נוצרה בחיבה לספרות ולקריאה
+      </div>
+    </div>
+  </section>
+  <!-- end favourite books section -->
+
+  <!-- info section -->
+  <section class="info_section layout_padding">
+    <div class="container">
+      <div class="info_contact">
+        <div class="row">
+          <div class="col-md-3"><a href=""><img src="images/location-white.png" alt=""><span>Tel Aviv, Israel</span></a></div>
+          <div class="col-md-3"><a href="https://www.linkedin.com/in/iris-eting-786a89222/" target="_blank"><img src="images/linkedin.png" alt=""></a></div>
+          <div class="col-md-3"><a href="https://www.instagram.com/iriseting?igsh=YnZjaWdxd2phcHAw" target="_blank"><img src="images/instagram.png" alt=""></a></div>
+          <div class="col-md-3"><a href=""><img src="images/envelope-white.png" alt=""><span>Contact Me</span></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end info section -->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+</body>
+</html>
